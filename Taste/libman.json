@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.5.2",
+      "destination": "wwwroot/lib/bootstrap/dist/"
+    },
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/dist/"
+    },
+    {
+      "library": "jquery-validate@1.17.0",
+      "destination": "wwwroot/lib/jquery-validation/dist/"
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.11",
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
+    },
+    {
+      "library": "sweetalert@2.1.2",
+      "destination": "wwwroot/lib/sweetalert/dist/"
+    },
+    {
+      "library": "bootswatch@4.5.2",
+      "destination": "wwwroot/lib/bootswatch/",
+      "files": [
+        "yeti/bootstrap.css",
+        "yeti/bootstrap.min.css"
+      ]
+    }
+  ,
+{
+  "library": "bootswatch@4.5.2",
+  "destination": "wwwroot/lib/bootswatch/"
+}
+]
+}
