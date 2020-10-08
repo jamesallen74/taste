@@ -29,11 +29,10 @@
         "yeti/bootstrap.css",
         "yeti/bootstrap.min.css"
       ]
+    },
+    {
+      "library": "bootswatch@4.5.2",
+      "destination": "wwwroot/lib/bootswatch/"
     }
-  ,
-{
-  "library": "bootswatch@4.5.2",
-  "destination": "wwwroot/lib/bootswatch/"
-}
-]
+  ]
 }

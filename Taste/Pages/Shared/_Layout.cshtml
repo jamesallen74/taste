@@ -1,18 +1,17 @@
 ﻿@using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Taste</title>
-    <link rel="stylesheet" href="~/lib/bootswatch/pulse/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootswatch/yeti/bootstrap.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
 </head>
 <body>
@@ -30,11 +29,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+                                Admin
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-page="/Admin/Category/Index">Categories</a>
+                                <a class="dropdown-item" asp-page="/Admin/FoodType/Index">Food Types</a>
+                                <a class="dropdown-item" asp-page="/Admin/MenuItem/Index">Menu Items</a>
+                                <a class="dropdown-item" asp-page="/Admin/User/Index">Users</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#" onclick="swal('MyApp', '&copy; 2020 - U.S. Bank \n\n @Configuration["Description"] \n\n Support: @Configuration["Support"] \n Version: @Configuration["Version"] \n Build: @Configuration["Build"] \n CAR ID: @Configuration["CarID"] ')">About</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown2" data-toggle="dropdown">
+                                About
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-area="" asp-page="/Privacy">Privacy</a>
+                                <a class="dropdown-item" href="#" onclick="swal('MyApp', '&copy; 2020 - My Bank \n\n @Configuration["Description"] \n\n Support: @Configuration["Support"] \n Version: @Configuration["Version"] \n Build: @Configuration["Build"] \n CAR ID: @Configuration["CarID"] ')">App Info</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -50,28 +63,28 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             @*<span>
-                    <button type="button" class="btn btn-link"
-                            onclick="swal('MyApp', '&copy; 2020 - U.S. Bank \nVersion: @Configuration["Version"] \n Support:@Configuration["Support"] \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ligula lectus, tincidunt et rhoncus sed, tincidunt consequat ex. Cras tempor et quam sit amet auctor. \n       Aenean sagittis varius nunc vitae commodo. In ornare tempus congue. Donec eu lorem ornare, fermentum nunc gravida, pulvinar metus. Curabitur rhoncus tellus neque. Curabitur ac nunc hendrerit libero fermentum cursus nec ut magna. Nullam cursus lacinia ultricies. In quis varius magna. Phasellus quis finibus sapien.')">
-                        About
-                    </button>
-                </span>*@
+                    <button type="button" 
+                            class="btn btn-link"
+                            onclick="swal('MyApp', '&copy; 2020 - XXXX \nVersion: @Configuration["Version"] \n Support:@Configuration["Support"] \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ligula lectus, tincidunt et rhoncus sed, tincidunt consequat ex. Cras tempor et quam sit amet auctor. \n       Aenean sagittis varius nunc vitae commodo. In ornare tempus congue. Donec eu lorem ornare, fermentum nunc gravida, pulvinar metus. Curabitur rhoncus tellus neque. Curabitur ac nunc hendrerit libero fermentum cursus nec ut magna. Nullam cursus lacinia ultricies. In quis varius magna. Phasellus quis finibus sapien.')">
+                        About</button>
+              </span>*@
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="https://kit.fontawesome.com/XXXXXX.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="https://kit.fontawesome.com/xxxxxx.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.4.10/cleave.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.4.10/addons/cleave-phone.us.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=XXXXXX"></script>
+    @*<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=XXXXXX"></script>*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.js"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
